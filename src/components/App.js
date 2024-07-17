@@ -11,8 +11,12 @@ const App = () => {
 
   return (
     <div>
-      <p className="app-header">{isLoggedIn ? 'Welcome You are logged in!!' : 'Parent Component'}</p>
-      {!isLoggedIn && <LoginForm onLogin={handleLogin} />}
+      <h1 className="app-header parent">Parent Component</h1>
+      {isLoggedIn ? (
+        <p>You are logged in!!</p>
+      ) : (
+        <LoginForm onLogin={handleLogin} />
+      )}
     </div>
   );
 }
